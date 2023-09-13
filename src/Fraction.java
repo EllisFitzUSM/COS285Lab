@@ -3,7 +3,7 @@
  * @author Ellis, Josh, Jonah, Gabrielle
  * @version 6 September 2023
  */
-public class Fraction implements INumber {
+public class Fraction implements INumber<Object> {
     int numerator;
     int denominator;
     
@@ -30,6 +30,12 @@ public class Fraction implements INumber {
     }
 
     @Override
+    /**
+     * @author Ellis Fitzgerald
+     * @version 13 September 2023
+     * @param input - An object that is casted to a Fraction
+     * plus - Adds this Fraction with input Fraction
+     */
     public Object plus(Object input) {
         Fraction frac = (Fraction)input;
         int sumNumerator = (this.numerator * frac.denominator) + (frac.numerator * this.denominator);
@@ -61,6 +67,8 @@ public class Fraction implements INumber {
     /**
      * @author Ellis Fitzgerald
      * @version 13 September 2023
+     * @param input - An object that is casted to a Fraction
+     * multiply - Multiplies this Fraction with input Fraction
      * 
      */
     public Object multiply(Object input) {
