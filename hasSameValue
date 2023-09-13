@@ -1,0 +1,54 @@
+//Gabrielle Akers
+public class Fraction {
+    public int nom;
+    public int denom;
+    public Fraction(int i, int j) {
+        this.nom = i;
+        this.denom = j;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Fraction[] fractionArray = new Fraction[100];
+        for(int i=0; i<fractionArray.length; i++) {
+            fractionArray[i] = new Fraction(i, i+1); 
+        }
+    }
+    
+    public boolean hasSameValue (Fraction F) {
+        double frac1 = this.nom / this.denom;
+        double frac2 = F.nom / F.denom;
+        //test nom
+        if (this.nom >= F.nom) {
+            //test if denom is greater
+            if (this.denom >= F.denom) {
+                //compare fraction values
+                if (frac1 != frac2) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            else {
+                return false;
+            }
+        }
+        //test if F is greater than this fraction
+        else {
+            if (this.denom < F.denom) {
+                //compare fraction values
+                if (frac1 != frac2) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            else {
+                return false;
+            }
+        }    
+    }
+
+}
