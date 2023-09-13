@@ -3,7 +3,7 @@
  * numerator and denominator
  * 
  * @author Ellis, Josh, Jonah, Gabrielle
- * @version 6 September 2023
+ * @version 13 September 2023
  */
 public class Fraction implements INumber {
 	int numerator;
